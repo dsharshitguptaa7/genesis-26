@@ -1,0 +1,27 @@
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.logo img{
+
+height:50px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+}

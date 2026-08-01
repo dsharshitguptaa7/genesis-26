@@ -1,0 +1,46 @@
+.hero h3,
+.hero h1,
+.hero p,
+.buttons{
+
+animation:fadeUp 1s ease forwards;
+
+opacity:0;
+
+}
+
+.hero h3{
+animation-delay:.3s;
+}
+
+.hero h1{
+animation-delay:.6s;
+}
+
+.hero p{
+animation-delay:.9s;
+}
+
+.buttons{
+animation-delay:1.2s;
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
