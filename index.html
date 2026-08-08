@@ -48,27 +48,48 @@ href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
 <!-- Navigation -->
 
+<!-- Navigation -->
 <nav>
 
-<div class="logo">
-    <img src="assets/logo.png" alt="Genesis'26 Logo">
-</div>
+    <div class="logo">
+        <img src="assets/logo.png" alt="Genesis'26 Logo">
+    </div>
 
-<ul>
+    <!-- Desktop Menu -->
+    <ul class="desktop-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#events">Events</a></li>
+        <li>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6gBed81PYMRH6tjXz_ehnyQQ0bF1U9x2OsUfkzPPjK8BMwQ/viewform" target="_blank">
+                Register
+            </a>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
-<li><a href="#">Home</a></li>
-
-<li><a href="#">About</a></li>
-
-<li><a href="#">Events</a></li>
-
-<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf6gBed81PYMRH6tjXz_ehnyQQ0bF1U9x2OsUfkzPPjK8BMwQ/viewform" target="_blank">Register</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 
 </nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#events">Events</a>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6gBed81PYMRH6tjXz_ehnyQQ0bF1U9x2OsUfkzPPjK8BMwQ/viewform"
+       target="_blank">
+        Register
+    </a>
+
+    <a href="#contact">Contact</a>
+
+</div>
 
 <!-- Hero Section -->
 
@@ -238,41 +259,66 @@ href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
 <!-- ================= Journey ================= -->
 
+<!-- ================= Journey ================= -->
+
 <section class="journey" id="journey">
 
     <div class="section-heading" data-aos="fade-up">
 
-        <h2>Choose Your Journey</h2>
+        <h2>Your Genesis'26 Journey</h2>
 
         <p>
-            Everything you need for Genesis'26 is just one click away.
+            Complete the steps below and get ready to be a part of Genesis'26.
         </p>
 
     </div>
 
+
     <div class="journey-grid">
 
-        <!-- Registration -->
-    
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6gBed81PYMRH6tjXz_ehnyQQ0bF1U9x2OsUfkzPPjK8BMwQ/viewform" class="journey-card" data-aos="zoom-in">
+
+        <!-- Step 1 -->
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6gBed81PYMRH6tjXz_ehnyQQ0bF1U9x2OsUfkzPPjK8BMwQ/viewform"
+           class="journey-card"
+           data-aos="zoom-in">
+
+            <div class="step-number">
+                01
+            </div>
 
             <div class="icon">
                 <i class="fa-solid fa-user-plus"></i>
             </div>
 
-            <h3>Registration</h3>
+            <h3>Register</h3>
+
+            <span class="journey-badge required">
+                Mandatory
+            </span>
 
             <p>
-                Complete your Freshers' registration.
+                Complete your Genesis'26 registration by paying the
+                <strong>₹400 entry fee</strong>.
             </p>
 
-            <span>Register →</span>
+            <span class="journey-action">
+                Register Now <i class="fa-solid fa-arrow-right"></i>
+            </span>
 
         </a>
 
-        <!-- Cultural -->
 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSepn1GSnu598Kvq3gAB-x4eQe6qyn5uHbslV-omFj0wv4gcew/viewform?usp=send_form" class="journey-card" data-aos="zoom-in" data-aos-delay="100">
+        <!-- Step 2 -->
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSepn1GSnu598Kvq3gAB-x4eQe6qyn5uHbslV-omFj0wv4gcew/viewform?usp=send_form"
+           class="journey-card"
+           data-aos="zoom-in"
+           data-aos-delay="100">
+
+            <div class="step-number">
+                02
+            </div>
 
             <div class="icon">
                 <i class="fa-solid fa-masks-theater"></i>
@@ -280,17 +326,33 @@ href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
             <h3>Cultural Participation</h3>
 
+            <span class="journey-badge optional">
+                Optional
+            </span>
+
             <p>
-                Participate in exciting cultural competitions.
+                Want to perform? Register for dance, singing, drama,
+                poetry, fashion walk and other cultural activities.
             </p>
 
-            <span>Participate →</span>
+            <span class="journey-action">
+                Participate <i class="fa-solid fa-arrow-right"></i>
+            </span>
 
         </a>
 
-        <!-- Community -->
 
-        <a href="https://chat.whatsapp.com/CKkYuciwZ4v6nykFmKkNZO" class="journey-card" data-aos="zoom-in" data-aos-delay="200">
+        <!-- Step 3 -->
+
+        <a href="https://chat.whatsapp.com/CKkYuciwZ4v6nykFmKkNZO"
+           class="journey-card"
+           data-aos="zoom-in"
+           data-aos-delay="200"
+           target="_blank">
+
+            <div class="step-number">
+                03
+            </div>
 
             <div class="icon">
                 <i class="fa-brands fa-whatsapp"></i>
@@ -298,35 +360,181 @@ href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
             <h3>Join Community</h3>
 
+            <span class="journey-badge recommended">
+                Stay Updated
+            </span>
+
             <p>
-                Stay updated with official announcements.
+                Join our WhatsApp community for important announcements,
+                reminders and Genesis'26 updates.
             </p>
 
-            <span>Join →</span>
+            <span class="journey-action">
+                Join Community <i class="fa-solid fa-arrow-right"></i>
+            </span>
 
         </a>
 
-        <!-- Verification -->
 
-        <a href="https://genesis26-mocha.vercel.app/" class="journey-card" data-aos="zoom-in" data-aos-delay="300">
+        <!-- Step 4 -->
+
+        <a href="https://genesis26-mocha.vercel.app/"
+           class="journey-card"
+           data-aos="zoom-in"
+           data-aos-delay="300"
+           target="_blank">
+
+            <div class="step-number">
+                04
+            </div>
 
             <div class="icon">
                 <i class="fa-solid fa-circle-check"></i>
             </div>
 
-            <h3>Payment Verification</h3>
+            <h3>Verify Payment</h3>
+
+            <span class="journey-badge recommended">
+                Important
+            </span>
 
             <p>
-                Verify your payment confirmation online.
+                Verify your payment online to confirm your registration
+                and ensure a hassle-free entry.
             </p>
 
-            <span>Verify →</span>
+            <span class="journey-action">
+                Verify Payment <i class="fa-solid fa-arrow-right"></i>
+            </span>
 
         </a>
+
 
     </div>
 
 </section>
+
+<!-- ================= Dress Code ================= -->
+
+<section class="dress-code" id="dress-code">
+
+    <div class="section-heading" data-aos="fade-up">
+
+        <h2>Dress Code</h2>
+
+        <p>
+            Embrace the elegance of tradition and make a graceful
+            statement at Genesis'26.
+        </p>
+
+    </div>
+
+
+    <div class="dress-code-card" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Dress Code Header -->
+
+        <div class="dress-header">
+
+            <div class="dress-icon">
+                <i class="fa-solid fa-gem"></i>
+            </div>
+
+            <div>
+                <span class="dress-label">THEME</span>
+                <h3>Traditional</h3>
+            </div>
+
+        </div>
+
+
+        <!-- Dress Options -->
+
+        <div class="dress-grid">
+
+
+            <!-- Girls -->
+
+            <div class="dress-item">
+
+                <div class="dress-item-icon">
+                    <i class="fa-solid fa-person-dress"></i>
+                </div>
+
+                <div class="dress-item-content">
+
+                    <span class="dress-for">FOR GIRLS</span>
+
+                    <h4>Grace & Elegance</h4>
+
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Saree
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Salwar Suit
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- Boys -->
+
+            <div class="dress-item">
+
+                <div class="dress-item-icon">
+                    <i class="fa-solid fa-person"></i>
+                </div>
+
+                <div class="dress-item-content">
+
+                    <span class="dress-for">FOR BOYS</span>
+
+                    <h4>Classic & Sophisticated</h4>
+
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Kurta-Pajama
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Formals
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Dress Code Note -->
+
+        <div class="dress-note">
+
+            <i class="fa-solid fa-sparkles"></i>
+
+            <p>
+                Dress traditionally. Celebrate confidently.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= Contact ================= -->
 
 <!-- ================= Contact ================= -->
 
@@ -342,45 +550,249 @@ href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
     </div>
 
+
     <div class="contact-grid">
 
-        <!-- WhatsApp -->
 
-        <div class="contact-card">
+        <!-- Community -->
+
+        <div class="contact-card" data-aos="fade-up">
 
             <i class="fa-brands fa-whatsapp"></i>
 
-            <h3>WhatsApp Community</h3>
+            <h3>Community Updates</h3>
 
-            <p>Get instant updates and announcements.</p>
+            <p>
+                Stay connected with the latest announcements,
+                reminders, and event updates.
+            </p>
 
-            <a href="https://chat.whatsapp.com/CKkYuciwZ4v6nykFmKkNZO" target="_blank">
+            <a href="https://chat.whatsapp.com/CKkYuciwZ4v6nykFmKkNZO"
+               target="_blank">
                 Join Community
             </a>
 
         </div>
 
-        <!-- Coordinator -->
 
-        <div class="contact-card">
+        <!-- Event Coordination -->
+
+        <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
 
             <i class="fa-solid fa-user"></i>
 
-            <h3>Event Coordinators</h3>
+            <h3>Event Coordination</h3>
 
             <p>
-                Contact the Genesis'26 coordinators directly. 
+                Reach out to the team for event-related
+                support and coordination.
             </p>
 
-            <a href="https://wa.me/+918874704090" target="_blank">
-                Chat on WhatsApp
-            </a>
+            <div class="coordinator-inline">
+
+                <p>
+                    <strong>Cultural Head</strong><br>
+                    Ansh Sharma
+                </p>
+
+                <a href="https://wa.me/+916387165866"
+                   target="_blank">
+                    Contact on WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Payment & Course Support -->
+
+        <div class="contact-card coordinator-card"
+             data-aos="fade-up"
+             data-aos-delay="200">
+
+            <i class="fa-solid fa-wallet"></i>
+
+            <h3>Payment & Course Support</h3>
+
+            <p class="coordinator-intro">
+                Select your course to contact the concerned
+                coordinator.
+            </p>
+
+
+            <div class="coordinator-list">
+
+
+                <!-- Mathematics & Physics -->
+
+                <details class="coordinator-item">
+
+                    <summary>
+                        <span>
+                            B.Sc Hons (Mathematics) & B.Sc Hons (Physics)
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </summary>
+
+                    <div class="coordinator-details">
+
+                        <p>
+                            Ishaan Deep Singh Malhotra
+                        </p>
+
+                        <a href="https://wa.me/+918303491202"
+                           target="_blank">
+                            Message
+                        </a>
+
+                    </div>
+
+                </details>
+
+
+                <!-- Chemistry -->
+
+                <details class="coordinator-item">
+
+                    <summary>
+
+                        <span>
+                            B.Sc Hons (Chemistry)
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </summary>
+
+                    <div class="coordinator-details">
+
+                        <p>
+                            Sanyogita Omar
+                        </p>
+
+                        <a href="https://wa.me/+919452030342"
+                           target="_blank">
+                            Message
+                        </a>
+
+                    </div>
+
+                </details>
+
+
+                <!-- M.Sc Physics -->
+
+                <details class="coordinator-item">
+
+                    <summary>
+
+                        <span>
+                            M.Sc Physics
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </summary>
+
+                    <div class="coordinator-details">
+
+                        <p>
+                            Aryan Raj
+                        </p>
+
+                        <a href="https://wa.me/+918467908646"
+                           target="_blank">
+                            Message
+                        </a>
+
+                    </div>
+
+                </details>
+
+
+                <!-- M.Sc Mathematics -->
+
+                <details class="coordinator-item">
+
+                    <summary>
+
+                        <span>
+                            M.Sc Mathematics & M.Sc Mathematics with AI and DS
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </summary>
+
+                    <div class="coordinator-details">
+
+                        <p>
+                            Vipin Kumar
+                        </p>
+
+                        <a href="https://wa.me/+918601804759"
+                           target="_blank">
+                            Message
+                        </a>
+
+                    </div>
+
+                </details>
+
+
+                <!-- M.Sc Chemistry -->
+
+                <details class="coordinator-item">
+
+                    <summary>
+
+                        <span>
+                            M.Sc Chemistry
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </summary>
+
+                    <div class="coordinator-details">
+
+                        <p>
+                            Kshama Yadav
+                        </p>
+
+                        <a href="https://wa.me/+917080405771"
+                           target="_blank">
+                            Message
+                        </a>
+
+                    </div>
+
+                </details>
+
+
+            </div>
 
         </div>
 
     </div>
 
 </section>
+
+<!-- ================= Footer ================= -->
+
+<footer class="footer">
+    <p>
+        © 2026 Genesis'26. All Rights Reserved.
+    </p>
+
+    <p>
+        Created & Developed by
+        <strong>Harshit Gupta</strong>
+        <span>(M.Sc Mathematics with AI & DS)</span>
+    </p>
+</footer>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
