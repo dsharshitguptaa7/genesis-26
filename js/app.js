@@ -90,3 +90,48 @@ gsap.from(".countdown div",{
     delay:1
 
 });
+
+// ===========================
+// Mobile Navigation
+// ===========================
+
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuToggle.addEventListener("click", () => {
+
+    mobileMenu.classList.toggle("active");
+
+    const icon = menuToggle.querySelector("i");
+
+    if(mobileMenu.classList.contains("active")){
+
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+
+    }else{
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+    }
+
+});
+
+
+// Close menu when a link is clicked
+
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        mobileMenu.classList.remove("active");
+
+        const icon = menuToggle.querySelector("i");
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+    });
+
+});
