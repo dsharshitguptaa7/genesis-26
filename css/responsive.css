@@ -1,148 +1,232 @@
-@media(max-width:900px){
+/* ===================================================
+   GENESIS '26 - RESPONSIVE STYLES
+   =================================================== */
 
-.hero h1{
-
-font-size:48px;
-
-}
-
-.logo img{
-
-height:50px;
-
-}
-
-.hero p{
-
-font-size:16px;
-
-}
-
-.dress-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.dress-code-card{
-
-padding:30px;
-
-}
-
-}
-
-@media(max-width:600px){
-
-.dress-code{
-
-padding:80px 20px 70px;
-
-}
-
-.dress-code-card h3{
-
-font-size:24px;
-
-}
-
-.dress-item h4{
-
-font-size:18px;
-
-}
-
-}
-
-@media(max-width:600px){
-
-    .journey{
-        padding:90px 20px;
+/* Tablet & Smaller Laptops (<= 992px) */
+@media (max-width: 992px) {
+    nav {
+        padding: 14px 6%;
     }
 
-    .journey-grid{
-        gap:22px;
-        margin-top:40px;
+    .hero {
+        padding: 130px 20px 70px;
     }
 
-    .journey-card{
-        padding:35px 25px 30px;
+    .hero h1 {
+        font-size: 52px;
     }
 
-    .journey-card h3{
-        font-size:23px;
+    .hero p {
+        font-size: 16.5px;
     }
 
-    .journey-card p{
-        font-size:14px;
+    .section-heading h2 {
+        font-size: 38px;
     }
 
-    .step-number{
-        top:18px;
-        right:20px;
+    .about, .journey, .mrms-section, .dress-code, .contact-section {
+        padding: 90px 6%;
     }
 
-    .dress-header{
-    gap:14px;
+    .dress-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
-.dress-header .dress-icon{
-    width:60px;
-    height:60px;
-}
-
-.dress-header h3{
-    font-size:24px;
-}
-
-.dress-item{
-    padding:22px;
-    gap:16px;
-}
-
-.dress-item-icon{
-    width:50px;
-    height:50px;
-    font-size:20px;
-}
-
-.dress-item h4{
-    font-size:17px;
-}
-
-.dress-item li{
-    font-size:14px;
-}
-
-.dress-note p{
-    font-size:18px;
-    text-align:center;
-}
-
-}
-
-@media(max-width:600px){
-
-    .contact-section{
-        padding:90px 20px 70px;
+/* Tablets (<= 768px) */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 44px;
+        line-height: 1.2;
     }
 
-    .contact-grid{
-        grid-template-columns:1fr;
-        gap:22px;
-        margin-top:40px;
+    .hero h3 {
+        font-size: 17px;
+        letter-spacing: 2px;
     }
 
-    .contact-card{
-        padding:30px 24px;
+    .countdown {
+        gap: 12px;
+        margin: 30px auto 35px;
     }
 
-    .coordinator-item summary{
-        padding:15px;
+    .countdown div {
+        width: 85px;
+        padding: 16px 8px;
+        border-radius: 16px;
     }
 
-    .coordinator-item summary span{
-        font-size:13px;
+    .countdown h2 {
+        font-size: 30px;
     }
 
+    .countdown span {
+        font-size: 11px;
+    }
+
+    .mrms-titles-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .mrms-title-card {
+        padding: 35px 22px;
+    }
+
+    .mrms-title-card h3 {
+        font-size: 26px;
+    }
+
+    .mrms-rounds-wrap {
+        padding: 35px 20px;
+    }
+
+    .mrms-rounds-header h3 {
+        font-size: 24px;
+    }
+
+    .mrms-cta-banner {
+        padding: 45px 22px;
+        border-radius: 24px;
+    }
+
+    .mrms-cta-content h3 {
+        font-size: 28px;
+    }
+
+    .mrms-cta-btn {
+        padding: 16px 28px;
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .dress-code-card {
+        padding: 32px 24px;
+    }
+
+    .dress-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+/* Mobile Phones (<= 480px) */
+@media (max-width: 480px) {
+    .logo-title {
+        font-size: 17px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 14.5px;
+    }
+
+    .countdown {
+        gap: 8px;
+    }
+
+    .countdown div {
+        width: 72px;
+        padding: 12px 6px;
+        border-radius: 14px;
+    }
+
+    .countdown h2 {
+        font-size: 24px;
+    }
+
+    .countdown span {
+        font-size: 10.5px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px 25px;
+        font-size: 14.5px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .section-heading p {
+        font-size: 14px;
+    }
+
+    .about, .journey, .mrms-section, .dress-code, .contact-section {
+        padding: 70px 5%;
+    }
+
+    .about-card, .journey-card, .contact-card {
+        padding: 30px 20px;
+    }
+
+    .mrms-rounds-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .perk-item {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .dress-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 22px 18px;
+    }
+
+    .dress-item ul {
+        justify-content: center;
+    }
+
+    .dress-note p {
+        font-size: 17px;
+    }
+
+    .team-contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .team-contact-item a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .coordinator-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .coordinator-details a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer {
+        padding: 35px 15px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
 }
