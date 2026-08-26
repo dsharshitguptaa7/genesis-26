@@ -5,18 +5,34 @@ if(typeof AOS !== "undefined"){
     });
 }
 
-// Loader
+// ===========================
+// Preloader Handler
+// ===========================
 
-window.addEventListener("load", () => {
+function hideLoader() {
+    const loader = document.getElementById("loader");
+    if (loader && !loader.classList.contains("hide")) {
+        loader.classList.add("hide");
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 550);
+    }
+}
 
-    setTimeout(() => {
+// Trigger hide on load or DOM ready
+if (document.readyState === "complete") {
+    setTimeout(hideLoader, 600);
+} else {
+    window.addEventListener("load", () => {
+        setTimeout(hideLoader, 800);
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(hideLoader, 1400);
+    });
+}
 
-        const loader = document.getElementById("loader");
-        if(loader) loader.style.display = "none";
-
-    }, 1800);
-
-});
+// Guaranteed maximum safety fallback: dismiss loader after at most 2s
+setTimeout(hideLoader, 2000);
 
 // Mouse Glow
 
