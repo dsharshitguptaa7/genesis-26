@@ -1,4 +1,9 @@
-AOS.init();
+if(typeof AOS !== "undefined"){
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+}
 
 // Loader
 
@@ -6,7 +11,8 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
 
-        document.getElementById("loader").style.display = "none";
+        const loader = document.getElementById("loader");
+        if(loader) loader.style.display = "none";
 
     }, 1800);
 
@@ -16,17 +22,19 @@ window.addEventListener("load", () => {
 
 const glow = document.querySelector(".cursor-glow");
 
-document.addEventListener("mousemove", (e) => {
+if(glow){
+    document.addEventListener("mousemove", (e) => {
 
-    glow.style.left = e.clientX + "px";
+        glow.style.left = e.clientX + "px";
 
-    glow.style.top = e.clientY + "px";
+        glow.style.top = e.clientY + "px";
 
-});
+    });
+}
 
 // Countdown
 
-const eventDate = new Date("2026-09-15T10:00:00").getTime();
+const eventDate = new Date("2026-09-08T00:00:00").getTime();
 
 function updateCountdown(){
 
@@ -34,62 +42,35 @@ function updateCountdown(){
 
     const gap = eventDate - now;
 
-    if(gap <= 0) return;
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
 
-    const days = Math.floor(gap / (1000*60*60*24));
-    const hours = Math.floor((gap % (1000*60*60*24)) / (1000*60*60));
-    const minutes = Math.floor((gap % (1000*60*60)) / (1000*60));
-    const seconds = Math.floor((gap % (1000*60)) / 1000);
+    if(!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
-    document.getElementById("days").textContent = days;
-    document.getElementById("hours").textContent = hours;
-    document.getElementById("minutes").textContent = minutes;
-    document.getElementById("seconds").textContent = seconds;
+    if(gap <= 0){
+        daysEl.textContent = "00";
+        hoursEl.textContent = "00";
+        minutesEl.textContent = "00";
+        secondsEl.textContent = "00";
+        return;
+    }
+
+    const days = Math.floor(gap / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((gap % (1000 * 60)) / 1000);
+
+    daysEl.textContent = String(days).padStart(2, '0');
+    hoursEl.textContent = String(hours).padStart(2, '0');
+    minutesEl.textContent = String(minutes).padStart(2, '0');
+    secondsEl.textContent = String(seconds).padStart(2, '0');
 }
 
 updateCountdown();
 
 setInterval(updateCountdown,1000);
-
-// Hero Animation
-
-gsap.from(".hero h1",{
-
-    y:80,
-
-    opacity:0,
-
-    duration:1.2,
-
-    delay:.5
-
-});
-
-gsap.from(".hero p",{
-
-    y:40,
-
-    opacity:0,
-
-    duration:1,
-
-    delay:.8
-
-});
-
-gsap.from(".countdown div",{
-
-    y:50,
-
-    opacity:0,
-
-    stagger:.15,
-
-    duration:1,
-
-    delay:1
-
-});
 
 // ===========================
 // Mobile Navigation
@@ -133,5 +114,7 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
         icon.classList.add("fa-bars");
 
     });
+
+});
 
 });
