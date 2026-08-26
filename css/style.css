@@ -497,6 +497,82 @@ nav {
     box-shadow: 0 10px 30px rgba(109, 31, 42, 0.2);
 }
 
+/* Hero Registration Deadline Highlight */
+.hero-deadline-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.hero-deadline-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 253, 248, 0.92);
+    border: 1.5px solid var(--gold);
+    padding: 10px 24px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(109, 31, 42, 0.08), 0 0 20px rgba(201, 162, 39, 0.18);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition: all 0.35s ease;
+}
+
+.hero-deadline-card:hover {
+    transform: translateY(-3px) scale(1.02);
+    border-color: var(--primary);
+    box-shadow: 0 15px 35px rgba(109, 31, 42, 0.12), 0 0 25px rgba(201, 162, 39, 0.3);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.deadline-live-beacon {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: #E53935;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #E53935;
+    flex-shrink: 0;
+}
+
+.deadline-live-beacon::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 1.5px solid #E53935;
+    animation: beaconRipple 1.8s infinite ease-out;
+}
+
+@keyframes beaconRipple {
+    0% { transform: scale(0.8); opacity: 1; }
+    100% { transform: scale(2.2); opacity: 0; }
+}
+
+.deadline-text-wrap {
+    font-size: 14.5px;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.deadline-text-wrap strong {
+    color: var(--primary);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.deadline-badge-pill {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #FFE49E;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(109, 31, 42, 0.2);
+}
+
 /* Floating Petals */
 .petals {
     position: absolute;
@@ -785,6 +861,31 @@ nav {
 .journey-badge.recommended {
     background: rgba(109, 31, 42, 0.08);
     color: var(--primary-dark);
+}
+
+.card-deadline-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(201, 162, 39, 0.12);
+    border: 1px solid rgba(201, 162, 39, 0.35);
+    color: var(--primary-dark);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: fit-content;
+}
+
+.card-deadline-tag i {
+    color: var(--gold);
+    font-size: 13px;
+}
+
+.card-deadline-tag strong {
+    color: var(--primary);
+    font-weight: 700;
 }
 
 .journey-card p {
@@ -1101,6 +1202,32 @@ nav {
     font-size: 28px;
     color: var(--gold);
     box-shadow: 0 0 25px rgba(201, 162, 39, 0.4);
+}
+
+.mrms-deadline-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: rgba(201, 162, 39, 0.2);
+    border: 1px solid rgba(255, 228, 158, 0.6);
+    color: #FFE49E;
+    padding: 7px 22px;
+    border-radius: 50px;
+    font-size: 13.5px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.mrms-deadline-badge i {
+    color: #FFE49E;
+    font-size: 14px;
+}
+
+.mrms-deadline-badge strong {
+    color: #FFFFFF;
+    font-weight: 700;
+    letter-spacing: 0.3px;
 }
 
 .mrms-cta-content h3 {

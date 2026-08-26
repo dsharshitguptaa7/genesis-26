@@ -160,6 +160,23 @@
         font-size: 14.5px;
     }
 
+    .hero-deadline-card {
+        padding: 8px 16px;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 22px;
+    }
+
+    .deadline-text-wrap {
+        font-size: 13px;
+    }
+
+    .mrms-deadline-badge {
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+
     .section-heading h2 {
         font-size: 30px;
     }
