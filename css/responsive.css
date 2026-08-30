@@ -101,6 +101,27 @@
         width: 100%;
     }
 
+    .passes-announcement-card {
+        padding: 24px 20px;
+        margin: 25px 0 30px;
+        border-radius: 24px;
+    }
+
+    .passes-card-body {
+        flex-direction: column;
+        text-align: center;
+        gap: 18px;
+    }
+
+    .passes-title {
+        font-size: 20px;
+    }
+
+    .passes-download-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
     .dress-code-card {
         padding: 32px 24px;
     }
@@ -158,6 +179,19 @@
         width: 100%;
         padding: 14px 25px;
         font-size: 14.5px;
+    }
+
+    .passes-announcement-card {
+        padding: 20px 16px;
+        margin: 20px 0 25px;
+    }
+
+    .passes-title {
+        font-size: 18px;
+    }
+
+    .passes-desc {
+        font-size: 13.5px;
     }
 
     .hero-deadline-card {

@@ -26,9 +26,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 <link rel="stylesheet"
 href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
-<link rel="stylesheet" href="css/style.css?v=6">
-<link rel="stylesheet" href="css/animation.css?v=6">
-<link rel="stylesheet" href="css/responsive.css?v=6">
+<link rel="stylesheet" href="css/style.css?v=8">
+<link rel="stylesheet" href="css/animation.css?v=8">
+<link rel="stylesheet" href="css/responsive.css?v=8">
 
 </head>
 
@@ -64,10 +64,17 @@ href="https://unpkg.com/aos@2.3.4/dist/aos.css">
         <li><a href="#dress-code">Dress Code</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
+            <a href="https://genesis26-mocha.vercel.app/"
+               target="_blank"
+               class="nav-pass-cta">
+                <i class="fa-solid fa-ticket"></i> Download Pass
+            </a>
+        </li>
+        <li>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6gBed81PYMRH6tjXz_ehnyQQ0bF1U9x2OsUfkzPPjK8BMwQ/viewform"
                target="_blank"
                class="nav-cta">
-                <i class="fa-solid fa-ticket"></i> Register
+                <i class="fa-solid fa-user-plus"></i> Register
             </a>
         </li>
     </ul>
@@ -88,10 +95,15 @@ href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <a href="#mrms-freshers"><i class="fa-solid fa-crown"></i> Mr. & Miss Freshers</a>
     <a href="#dress-code"><i class="fa-solid fa-gem"></i> Dress Code</a>
     <a href="#contact"><i class="fa-solid fa-headset"></i> Contact</a>
+    <a href="https://genesis26-mocha.vercel.app/"
+       target="_blank"
+       class="mobile-pass-cta">
+        <i class="fa-solid fa-ticket"></i> Verify Payment & Download Pass
+    </a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6gBed81PYMRH6tjXz_ehnyQQ0bF1U9x2OsUfkzPPjK8BMwQ/viewform"
        target="_blank"
        class="mobile-nav-cta">
-        <i class="fa-solid fa-ticket"></i> Register Now (₹400)
+        <i class="fa-solid fa-user-plus"></i> Register Now (₹400)
     </a>
 
 </div>
@@ -167,12 +179,41 @@ href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
         </div>
 
+        <!-- Highlighted Passes Released Announcement Banner -->
+        <div class="passes-announcement-card" data-aos="zoom-in" data-aos-delay="150">
+            <div class="passes-badge">
+                <span class="passes-pulse-dot"></span>
+                <i class="fa-solid fa-sparkles"></i> PASSES ARE LIVE NOW!
+            </div>
+            <div class="passes-card-body">
+                <div class="passes-info">
+                    <h3 class="passes-title">
+                        🎉 Genesis '26 Entry Passes Released!
+                    </h3>
+                    <p class="passes-desc">
+                        Already registered? Verify your payment now to generate & download your official entry pass instantly!
+                    </p>
+                </div>
+                <a href="https://genesis26-mocha.vercel.app/" target="_blank" class="passes-download-btn">
+                    <i class="fa-solid fa-ticket"></i>
+                    <span>Download Pass Now</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
         <div class="buttons">
 
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6gBed81PYMRH6tjXz_ehnyQQ0bF1U9x2OsUfkzPPjK8BMwQ/viewform"
                target="_blank"
                class="btn">
-                <i class="fa-solid fa-ticket"></i> Register Now
+                <i class="fa-solid fa-user-plus"></i> Register Now
+            </a>
+
+            <a href="https://genesis26-mocha.vercel.app/"
+               target="_blank"
+               class="btn passes-btn-highlight">
+                <i class="fa-solid fa-ticket"></i> Download Pass
             </a>
 
             <a href="#journey" class="btn outline">
@@ -414,7 +455,7 @@ href="https://unpkg.com/aos@2.3.4/dist/aos.css">
         <!-- Step 4 -->
 
         <a href="https://genesis26-mocha.vercel.app/"
-           class="journey-card"
+           class="journey-card passes-step-card"
            data-aos="zoom-in"
            data-aos-delay="300"
            target="_blank">
@@ -423,23 +464,26 @@ href="https://unpkg.com/aos@2.3.4/dist/aos.css">
                 04
             </div>
 
-            <div class="icon">
-                <i class="fa-solid fa-circle-check"></i>
+            <div class="icon passes-icon">
+                <i class="fa-solid fa-ticket"></i>
             </div>
 
-            <h3>Verify Payment</h3>
+            <h3>Verify Payment & Download Your Pass</h3>
 
-            <span class="journey-badge recommended">
-                Important
+            <span class="journey-badge passes-live-badge">
+                <i class="fa-solid fa-sparkles"></i> Passes Released!
             </span>
 
+            <div class="card-passes-tag">
+                <i class="fa-solid fa-circle-check"></i> Instant Pass Download
+            </div>
+
             <p>
-                Verify your payment online to confirm your registration
-                and ensure a hassle-free entry.
+                🎉 <strong>Passes are Live!</strong> Verify your registration payment online to instantly unlock, generate, and download your official entry pass for Genesis'26.
             </p>
 
-            <span class="journey-action">
-                Verify Payment <i class="fa-solid fa-arrow-right"></i>
+            <span class="journey-action passes-action">
+                Verify Payment & Download Your Pass <i class="fa-solid fa-arrow-right"></i>
             </span>
 
         </a>
@@ -944,7 +988,7 @@ href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script src="js/app.js?v=6"></script>
+<script src="js/app.js?v=8"></script>
 
 </body>
 
