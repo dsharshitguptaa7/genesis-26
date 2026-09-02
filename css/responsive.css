@@ -194,16 +194,31 @@
         font-size: 13.5px;
     }
 
-    .hero-deadline-card {
-        padding: 8px 16px;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-        border-radius: 22px;
+    .reg-notice-card {
+        padding: 18px 16px;
+        border-radius: 20px;
     }
 
-    .deadline-text-wrap {
+    .reg-notice-title {
+        font-size: 17px !important;
+    }
+
+    .reg-notice-desc {
+        font-size: 13.5px !important;
+    }
+
+    .reg-meta-item {
+        font-size: 12px;
+        padding: 5px 12px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .reg-contact-btn {
+        width: 100%;
+        justify-content: center;
         font-size: 13px;
+        padding: 10px 16px;
     }
 
     .mrms-deadline-badge {

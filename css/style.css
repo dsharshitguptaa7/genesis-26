@@ -699,80 +699,157 @@ nav {
     box-shadow: 0 10px 30px rgba(109, 31, 42, 0.2);
 }
 
-/* Hero Registration Deadline Highlight */
-.hero-deadline-wrap {
+/* ===========================
+   Registration Status Notice Card (Seniors Offline Only)
+   =========================== */
+
+.reg-notice-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 28px;
+    margin-top: 32px;
+    width: 100%;
 }
 
-.hero-deadline-card {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: rgba(255, 253, 248, 0.92);
-    border: 1.5px solid var(--gold);
-    padding: 10px 24px;
-    border-radius: 50px;
-    box-shadow: 0 10px 30px rgba(109, 31, 42, 0.08), 0 0 20px rgba(201, 162, 39, 0.18);
+.reg-notice-card {
+    background: linear-gradient(145deg, #FFFFFF 0%, #FFFDF9 100%);
+    border: 1.5px solid rgba(201, 162, 39, 0.45);
+    border-top: 4px solid #D32F2F;
+    border-radius: 24px;
+    padding: 24px 28px;
+    max-width: 820px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(109, 31, 42, 0.08), 0 0 20px rgba(201, 162, 39, 0.12);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     transition: all 0.35s ease;
 }
 
-.hero-deadline-card:hover {
-    transform: translateY(-3px) scale(1.02);
+.reg-notice-card:hover {
+    transform: translateY(-3px);
     border-color: var(--primary);
-    box-shadow: 0 15px 35px rgba(109, 31, 42, 0.12), 0 0 25px rgba(201, 162, 39, 0.3);
-    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 16px 45px rgba(109, 31, 42, 0.12), 0 0 25px rgba(201, 162, 39, 0.2);
 }
 
-.deadline-live-beacon {
-    position: relative;
-    width: 10px;
-    height: 10px;
-    background: #E53935;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #E53935;
-    flex-shrink: 0;
+.reg-notice-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
 }
 
-.deadline-live-beacon::after {
-    content: "";
-    position: absolute;
-    inset: -4px;
-    border-radius: 50%;
-    border: 1.5px solid #E53935;
-    animation: beaconRipple 1.8s infinite ease-out;
-}
-
-@keyframes beaconRipple {
-    0% { transform: scale(0.8); opacity: 1; }
-    100% { transform: scale(2.2); opacity: 0; }
-}
-
-.deadline-text-wrap {
-    font-size: 14.5px;
-    color: var(--text);
-    font-weight: 500;
-}
-
-.deadline-text-wrap strong {
-    color: var(--primary);
-    font-weight: 700;
-    letter-spacing: 0.3px;
-}
-
-.deadline-badge-pill {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: #FFE49E;
+.reg-alert-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #FFEBEE;
+    color: #D32F2F;
+    border: 1px solid #FFCDD2;
     font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.8px;
+    font-weight: 800;
+    letter-spacing: 1px;
     text-transform: uppercase;
     padding: 4px 12px;
     border-radius: 50px;
-    box-shadow: 0 4px 12px rgba(109, 31, 42, 0.2);
+}
+
+.reg-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(109, 31, 42, 0.08);
+    color: var(--primary);
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    border: 1px solid rgba(109, 31, 42, 0.2);
+}
+
+.hero .reg-notice-card h4.reg-notice-title,
+.reg-notice-title {
+    font-family: 'Cinzel', serif !important;
+    font-size: 20px !important;
+    color: var(--primary-dark) !important;
+    margin-bottom: 8px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+}
+
+.hero .reg-notice-card p.reg-notice-desc,
+.reg-notice-desc {
+    font-size: 14.5px !important;
+    color: #4A3B32 !important;
+    line-height: 1.65 !important;
+    margin: 0 auto 16px !important;
+    max-width: 720px !important;
+}
+
+.hero .reg-notice-card p.reg-notice-desc strong {
+    color: var(--primary-dark) !important;
+    font-weight: 700 !important;
+}
+
+.reg-notice-meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    margin-bottom: 18px;
+}
+
+.reg-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(201, 162, 39, 0.12);
+    border: 1px solid rgba(201, 162, 39, 0.35);
+    color: var(--primary-dark);
+    font-size: 12.5px;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 50px;
+}
+
+.reg-meta-item i {
+    color: var(--gold);
+}
+
+.reg-meta-item strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.reg-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary);
+    color: white !important;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(109, 31, 42, 0.25);
+    transition: all 0.3s ease;
+}
+
+.reg-contact-btn:hover {
+    background: var(--gold);
+    color: #1A0609 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
+}
+
+.reg-contact-btn i:last-child {
+    transition: transform 0.3s ease;
+}
+
+.reg-contact-btn:hover i:last-child {
+    transform: translateY(3px);
 }
 
 /* Floating Petals */
@@ -1063,6 +1140,24 @@ nav {
 .journey-badge.recommended {
     background: rgba(109, 31, 42, 0.08);
     color: var(--primary-dark);
+}
+
+.journey-badge.closed-badge {
+    background: #FFEBEE !important;
+    color: #D32F2F !important;
+    border: 1px solid #FFCDD2 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.offline-step-card {
+    border-color: rgba(139, 38, 53, 0.35) !important;
+}
+
+.offline-step-card:hover {
+    border-color: var(--primary) !important;
+    box-shadow: 0 20px 45px rgba(109, 31, 42, 0.15) !important;
 }
 
 .card-deadline-tag {
